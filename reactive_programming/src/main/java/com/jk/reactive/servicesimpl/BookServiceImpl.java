@@ -26,26 +26,22 @@ public class BookServiceImpl implements BookService {
 	
 	@Override
 	public Mono<Book> createBook(Book book) {
-		// TODO Auto-generated method stub
 		Mono<Book> obj = repo.save(book);
 		return obj;
 	}
 
 	@Override
 	public Flux<Book> getAll() {
-		// TODO Auto-generated method stub
 		return repo.findAll();
 	}
 
 	@Override
 	public Mono<Book> get(int bookId) {
-		// TODO Auto-generated method stub
 		return repo.findById(bookId);
 	}
 
 	@Override
 	public Mono<Book> update(Book book, int id) {
-		// TODO Auto-generated method stub
 		Mono<Book> obj = repo.findById(id);
 		return obj.flatMap(s -> {
 
@@ -62,13 +58,11 @@ public class BookServiceImpl implements BookService {
 
 	@Override
 	public Mono<Void> delete(int bookId) {
-		// TODO Auto-generated method stub
 		return repo.findById(bookId).flatMap(s -> repo.delete(s));
 	}
 
 	@Override
 	public Flux<Book> search(String query) {
-		// TODO Auto-generated method stub
 		return null;
 	}
 
