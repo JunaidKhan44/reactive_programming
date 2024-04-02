@@ -25,7 +25,6 @@ public class Book {
 	
 	public Book() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public Book(int bookId, String name, String description, String publisher, String author) {
