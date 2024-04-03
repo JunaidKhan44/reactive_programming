@@ -51,9 +51,7 @@ public class BookServiceImpl implements BookService {
 			s.setAuthor(book.getAuthor());
 			s.setPublisher(book.getPublisher());
 			return repo.save(s);
-
 		});
-
 	}
 
 	@Override
